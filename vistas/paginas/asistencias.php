@@ -64,3 +64,5 @@
         </div>
     </div>
 </div>
+
+<script src="vistas/js/asistencias.js"></script>

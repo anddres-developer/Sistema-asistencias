@@ -27,19 +27,24 @@ if (isset($_SESSION['idBackend'])) {
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!--sweet alert-->
   <script src="vistas/js/sweetalert2.min.js"></script>
-
   <!-- Fuentes personalizadas -->
-  <link
-    href="vistas/recursos/vendor/fontawesome-free/css/all.min.css"
-    rel="stylesheet"
-    type="text/css" />
-  <link
-    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-    rel="stylesheet" />
-
+  <link href="vistas/recursos/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
   <!-- Custom styles for this template-->
   <link href="vistas/recursos/dist/css/sb-admin-2.min.css" rel="stylesheet" />
+  <!-- Bootstrap core JavaScript-->
+  <script src="vistas/recursos/vendor/jquery/jquery.min.js"></script>
+  <script src="vistas/recursos/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vistas/recursos/vendor/jquery-easing/jquery.easing.min.js"></script>
+
   <style>
+    @font-face {
+      font-family: 'Nunito';
+      src: url('vistas/recursos/dist/fonts/Nunito-VariableFont_wght.ttf');
+    }
+
+
     input[type=number]::-webkit-inner-spin-button,
     input[type=number]::-webkit-outer-spin-button {
       -webkit-appearance: none;
@@ -190,17 +195,6 @@ if (!isset($_SESSION['validarSesion'])):
       </div>
     </div>
 
-
-    <!-- Bootstrap core JavaScript-->
-    <script src="vistas/recursos/vendor/jquery/jquery.min.js"></script>
-    <script src="vistas/recursos/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="vistas/recursos/vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="vistas/recursos/dist/js/sb-admin-2.min.js"></script>
-
     <!-- Page level plugins -->
     <script src="vistas/recursos/vendor/datatables/jquery.dataTables.min.js"></script>
     <script src="vistas/recursos/vendor/datatables/dataTables.bootstrap4.min.js"></script>
@@ -208,12 +202,8 @@ if (!isset($_SESSION['validarSesion'])):
     <!-- Page level custom scripts -->
     <script src="vistas/recursos/dist/js/demo/datatables-demo.js"></script>
 
-    <script src="vistas/js/usuarios.js"></script>
-    <script src="vistas/js/roles.js"></script>
-    <script src="vistas/js/empleados.js"></script>
-    <script src="vistas/js/cargos.js"></script>
-    <script src="vistas/js/asistencias.js"></script>
-
+    <!-- Custom scripts for all pages-->
+    <script src="vistas/recursos/dist/js/sb-admin-2.min.js"></script>
 
   </body>
 <?php endif ?>

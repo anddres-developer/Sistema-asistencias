@@ -1,6 +1,7 @@
 <?php
-if (!empty($_POST["btnentrada"])) {
-    if (!empty($_POST["txtci"])) {
+
+if (isset($_POST["btnentrada"])) {
+    if (isset($_POST["txtci"])) {
         $ci = $_POST["txtci"];
         $consulta = $conexion->query(" select count(*) as 'total' from empleado where ci='$ci' ");
         $id = $conexion->query(" select id_empleado from empleado where ci='$ci' ");
@@ -48,12 +49,6 @@ if (!empty($_POST["btnentrada"])) {
             });
         </script>
     <?php } ?>
-
-    <script>
-        setTimeout(() => {
-            window.history.replaceState(null, null, window.location.pathname);
-        }, 0);
-    </script>
 
 <?php }
 
@@ -115,12 +110,6 @@ if (!empty($_POST["btnsalida"])) {
             })
         </script>
     <?php } ?>
-
-    <script>
-        setTimeout(() => {
-            window.history.replaceState(null, null, window.location.pathname);
-        }, 0);
-    </script>
 
 <?php }
 

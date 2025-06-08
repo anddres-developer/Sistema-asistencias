@@ -228,3 +228,5 @@
 	</div>
 
 </div>
+
+<script src="vistas/js/usuarios.js"></script>

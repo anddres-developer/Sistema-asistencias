@@ -13,7 +13,7 @@
 					<div class="card card-info card-outline">
 						<div class="card-header">
 							<button type="button" class="btn btn-success crear-rol" data-toggle="modal"
-							data-target="#modal-crear-roles"> 
+								data-target="#modal-crear-roles">
 								Crear nuevo rol
 							</button>
 						</div>
@@ -29,31 +29,31 @@
 									</tr>
 								</thead>
 								<tbody>
-								<?php 
-									foreach($roles as $key => $value){
+									<?php
+									foreach ($roles as $key => $value) {
 
 									?>
 
-									<tr>
-										<td><?php echo ($key+1) ?></td>
-										<td><?php echo $value["nom_rol"]?></td>
-										<td>
-											<div class="btn-group">
-												<button class="btn btn-warning btn-sm btnEditarRol" 
-													data-toggle="modal" idRol="<?php echo $value["id_roles"]?>"
-													data-target="#modal-editar-rol">
-													<i class="fa fa-pencil text-white"></i>
-												</button>
-												<button 
-													class="btn btn-danger btn-sm eliminarRol" 
-													idRol="<?php echo $value["id_roles"]?>">
-													<i class="fa fa-trash text-white"></i>
-												</button>
-											</div>
-										</td>
-									</tr>
+										<tr>
+											<td><?php echo ($key + 1) ?></td>
+											<td><?php echo $value["nom_rol"] ?></td>
+											<td>
+												<div class="btn-group">
+													<button class="btn btn-warning btn-sm btnEditarRol"
+														data-toggle="modal" idRol="<?php echo $value["id_roles"] ?>"
+														data-target="#modal-editar-rol">
+														<i class="fa fa-pencil text-white"></i>
+													</button>
+													<button
+														class="btn btn-danger btn-sm eliminarRol"
+														idRol="<?php echo $value["id_roles"] ?>">
+														<i class="fa fa-trash text-white"></i>
+													</button>
+												</div>
+											</td>
+										</tr>
 
-									<?php 
+									<?php
 									}
 									?>
 								</tbody>
@@ -76,26 +76,26 @@
 				<h4 class="alert alert-success alert-dismissible">Agregar nuevo Rol</h4>
 			</div>
 			<div class="modal-body">
-			<form method="post" enctype="multipart/form-data">
-				<div class="form-group has-feedback" bis_skin_checked="1">
-					<input type="text" class="form-control" name="nom_rol" placeholder="nombre del rol">
-					<span class="glyphicon glyphicon-user form-control-feedback"></span>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Cerrar</button>
-					<button type="submit" class="btn btn-primary">Guardar</button>
-				</div>
-				<?php 
+				<form method="post" enctype="multipart/form-data">
+					<div class="form-group has-feedback" bis_skin_checked="1">
+						<input type="text" class="form-control" name="nom_rol" placeholder="nombre del rol">
+						<span class="glyphicon glyphicon-user form-control-feedback"></span>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Cerrar</button>
+						<button type="submit" class="btn btn-primary">Guardar</button>
+					</div>
+					<?php
 
-				$guardarRol = new ctrRoles();
-				$guardarRol->ctrGuardarRol();
-				
-				?>
-			</form>
+					$guardarRol = new ctrRoles();
+					$guardarRol->ctrGuardarRol();
+
+					?>
+				</form>
 			</div>
 		</div>
 	</div>
-	
+
 </div>
 
 <!--Modal Editar Rol-->
@@ -108,25 +108,27 @@
 				<h4 class="alert alert-success alert-dismissible">Editar nuevo Rol</h4>
 			</div>
 			<div class="modal-body">
-			<form method="post" enctype="multipart/form-data">
-				<div class="form-group has-feedback" bis_skin_checked="1">
-					<input type="hidden" name="id_rolE">
-					<input type="text" class="form-control" name="nom_rolE" placeholder="nombre del rol">
-					<span class="glyphicon glyphicon-user form-control-feedback"></span>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Cerrar</button>
-					<button type="submit" class="btn btn-primary">Guardar</button>
-				</div>
-				<?php 
+				<form method="post" enctype="multipart/form-data">
+					<div class="form-group has-feedback" bis_skin_checked="1">
+						<input type="hidden" name="id_rolE">
+						<input type="text" class="form-control" name="nom_rolE" placeholder="nombre del rol">
+						<span class="glyphicon glyphicon-user form-control-feedback"></span>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Cerrar</button>
+						<button type="submit" class="btn btn-primary">Guardar</button>
+					</div>
+					<?php
 
 					$editarRol = new ctrRoles();
 					$editarRol->ctrEditarRol();
-				
-				?>
-			</form>
+
+					?>
+				</form>
 			</div>
 		</div>
 	</div>
-	
+
 </div>
+
+<script src="vistas/js/roles.js"></script>

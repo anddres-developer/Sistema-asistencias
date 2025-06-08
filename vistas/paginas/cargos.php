@@ -87,3 +87,5 @@
     </div>
 
 </div>
+
+<script src="vistas/js/cargos.js"></script>
