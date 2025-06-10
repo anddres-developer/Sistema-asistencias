@@ -45,7 +45,7 @@ if (isset($_FILES['archivo_sql']) && $_FILES['archivo_sql']['error'] === UPLOAD_
 
     // Mostrar resultados
     if (empty($errores)) {
-        echo "<p style='color: green;'>Base de datos importada exitosamente. Se ejecutaron " . $consultas_ejecutadas . " consultas.</p>";
+        echo "<p style='color: green;'>Base de datos importada exitosamente. Se ejecutaron " . $consultas_ejecutadas . " consultas.</p>" . "<script>setTimeout(function(){ window.history.back(); }, 1000);</script>";
     } else {
         echo "<p style='color: red;'>Se encontraron errores durante la importación:</p>";
         echo "<ul>";
