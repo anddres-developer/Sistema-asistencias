@@ -166,7 +166,8 @@ class ctrUsuarios
 
 								if(result.value){
 									//history.back();
-									window.location = "usuarios";
+									//window.location = "usuarios";
+									window.history.back();
 									}
 								});
 						</script>';

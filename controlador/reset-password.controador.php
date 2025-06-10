@@ -7,7 +7,7 @@ use PHPMailer\PHPMailer\Exception;
 require 'vistas/PHPMailer/src/Exception.php';
 require 'vistas/PHPMailer/src/PHPMailer.php';
 require 'vistas/PHPMailer/src/SMTP.php';
-//include '../config.php';
+include './config.php';
 
 class ctrResetPassword
 {
@@ -56,24 +56,21 @@ class ctrResetPassword
 
                     $mail->isHTML(true);
                     $mail->Subject = 'Nueva Clave de Acceso Sistema de Asistencias'; // Asunto
-                    $mail->Body =  'Se ha creado una nueva calve de acceso para el susario ' . $_POST['reset-password'] . '  es: <b>' . $passwordNuevo . '</b>'; // Cuerpo del mensaje
+                    $mail->Body =  'Se ha creado una nueva calve de acceso para el susario <b>' . $_POST['reset-password'] . '</b>  es: <b>' . $passwordNuevo . '</b>'; // Cuerpo del mensaje
                     $mail->AltBody = 'Cuerpo de texto plano para correos que no soportan HTML'; // Versión de texto plano
 
-                    /*if ($mail->send()) {
-                        echo '<br>La contraseña <b>' . $passwordNuevo . '</b> Se ha sido enviado a ' . $respuesta['email'];
-                    }*/
-
-                    $tabla = "usuarios";
-                    $respuesta2 = mdlUsuarios::mdlEditarPassword($tabla, $datos);
-
-
+                    if ($mail->send()) {
+                        //echo '<br>La contraseña <b>' . $passwordNuevo . '</b> Se ha sido enviado a ' . $respuesta['email'];
+                        $tabla = "usuarios";
+                        $respuesta2 = mdlUsuarios::mdlEditarPassword($tabla, $datos);
+                    }
                     if ($respuesta2 == 'ok') {
                         echo '<script> Swal.fire({
 							icon: "success",
 							title: "Se envío un correo electronico con la contrasea nueva",
 							showConfirmButton: false,
-							timer: 10000
-						}); </script>';
+							timer: 4000
+						}).then( () => window.location = "login" ); </script>';
                     }
                 } else {
                     echo '<script> Swal.fire({
