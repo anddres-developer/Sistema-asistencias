@@ -59,7 +59,7 @@ if (isset($_SESSION['idBackend'])) {
     }
 
     .fondo-imagen {
-      background-image: url('vistas/imagenes/fondo.jpeg');
+      background-image: url('vistas/imagenes/fondo.png');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;

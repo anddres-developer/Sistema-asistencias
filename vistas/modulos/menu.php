@@ -8,7 +8,7 @@
     <div class="sidebar-brand-icon">
       <img src="vistas/imagenes/icono.png" alt="logo" width="50" height="50">
     </div>
-    <div class="sidebar-brand-text mx-3">Política</div>
+    <div class="sidebar-brand-text mx-3">Control Asistencia</div>
   </a>
 
   <!-- Divider -->
