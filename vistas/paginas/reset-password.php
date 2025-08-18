@@ -14,7 +14,7 @@
                             <div class="col-lg-12">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <img src="vistas/imagenes/logo.png" alt="logo" class="rounded mx-auto d-block">
+                                        <img src="vistas/imagenes/logo.png" alt="logo" class="rounded mx-auto d-block" width="100" height="100">
                                         <br>
                                         <h1 class="h3 text-gray-900 mb-2 font-weight-bold">¿Olvidaste tu contraseña?</h1>
                                         <p class="mb-4">Lo entendemos, a veces pasan cosas. ¡Ingresa tu correo electrónico a
